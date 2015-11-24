@@ -1,2 +1,4 @@
-# sails-angular
-A simple web application using sailsJS and angularJs
+# Sails-Angular Sample Application
+
+A simple application using sailsJs and angularJS.
+
