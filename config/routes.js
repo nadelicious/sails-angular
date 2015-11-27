@@ -32,9 +32,7 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  'get /': {
-    'view': 'homepage'
-  },
+  'get /': 'PageController.showHomepage',
 
   'get /dashboard': 'PageController.showDashboard',
 
