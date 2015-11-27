@@ -1,0 +1,19 @@
+<form name="signupForm" ng-submit="vm.register()" autocomplete="off">
+   <div class="form-group">
+    <label for="register-username">Username</label>
+    <input type="text" class="form-control" name="username" id="register-username" placeholder="Username" required ng-model="vm.username" autocomplete="off">
+  </div>
+  <div class="form-group">
+    <label for="register-email">Email address</label>
+    <input type="email" name="email" class="form-control" id="register-email" placeholder="Email" required ng-model="vm.email" autocomplete="off">
+  </div>
+  <div class="form-group">
+    <label for="register-password">Password</label>
+    <input type="password" name="password" class="form-control" id="register-password" placeholder="Password" required ng-model="vm.password" autocomplete="off">
+  </div>
+  <button type="submit" class="btn btn-primary pull-right" ng-disabled="vm.loading">
+    <span ng-if="!vm.loading">Sign up</span>
+    <span ng-if="vm.loading">Loading...</span>
+  </button>
+  <div class="clearfix"></div>
+</form>

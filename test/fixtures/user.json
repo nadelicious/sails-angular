@@ -1,0 +1,17 @@
+[
+  {
+    "username": "ronald",
+    "email": "ronald.gemao@yahoo.com",
+    "createdAt": "2015-11-27T13:49:44.923Z",
+    "updatedAt": "2015-11-27T13:49:44.923Z",
+    "id": 1
+  },
+
+  {
+    "username": "chad",
+    "email": "chad.yeah@yahoo.com",
+    "createdAt": "2015-11-27T13:49:44.923Z",
+    "updatedAt": "2015-11-27T13:49:44.923Z",
+    "id": 2
+  }
+]
