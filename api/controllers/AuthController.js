@@ -19,16 +19,16 @@ var AuthController = {
   // callback for register and login
   callback: function (req, res) {
     passport.callback(req, res, function (err, user, challenges, statuses) {
-      // for login only
-      if ( !req.param('action') ) {
-        req.session.authenticated = true;
-      }
-
       if (err || !user) {
-        res.serverError(err)
-      }
+        return res.notFound(err)
+      } else {
+         // for login only
+          if ( !req.param('action') ) {
+            req.session.authenticated = true;
+          }
 
-      return res.ok( user );
+          return res.ok( user );
+      }
     } );
   }
 };

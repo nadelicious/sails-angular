@@ -13,8 +13,8 @@
 				'password': vm.password
 			} ).then( function ( data ) { 
 				$toastr.success( 'You are successfully registered.' );
-			} ).catch( function () { 
-				$toastr.error( 'Something went wrong.' );
+			} ).catch( function ( err ) { 
+				$toastr.error( err.statusText );
 			} ).finally( function () { 
 				vm.username = null;
 				vm.email    = null;
