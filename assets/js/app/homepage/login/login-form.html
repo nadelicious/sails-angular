@@ -1,0 +1,14 @@
+ <form name="login-form" class="form-inline navbar-form navbar-right" ng-submit="vm.login()" autocomplete="off">
+  <div class="form-group">
+    <label class="sr-only" for="login-email">Email address</label>
+    <input type="text" class="form-control" id="login-email" placeholder="Email" autocomplete="off" required ng-model="vm.identifier">
+  </div>
+  <div class="form-group">
+    <label class="sr-only" for="login-password">Password</label>
+    <input type="password" class="form-control" id="login-password" placeholder="Password" autocomplete="off" required ng-model="vm.password">
+  </div>
+  <button type="submit" class="btn btn-primary">
+    <span ng-if="!vm.loading">Sign in</span>
+    <span ng-if="vm.loading">Loading...</span>
+  </button>
+</form>

@@ -32,9 +32,12 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': {
-    view: 'homepage'
-  }
+  'get /': {
+    'view': 'homepage'
+  },
+
+  'get /dashboard': 'PageController.showDashboard',
+
 
   /***************************************************************************
   *                                                                          *
@@ -45,5 +48,8 @@ module.exports.routes = {
   * for configuration options and examples.                                  *
   *                                                                          *
   ***************************************************************************/
+'get /logout':              'AuthController.logout',
+'post /auth/local':         'AuthController.callback',
+'post /auth/local/:action': 'AuthController.callback'
 
 };

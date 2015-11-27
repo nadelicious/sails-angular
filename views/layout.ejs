@@ -1,12 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
   <head>
-    <title>New Sails App</title>
+    <title>Sails-Angular</title>
 
     <!-- Viewport mobile tag for sensible mobile support -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <style>
+      /* This helps the ng-show/ng-hide animations start at the right place. */
+      /* Since Angular has this but needs to load, this gives us the class early. */
+      .ng-hide {
+        display: none!important;
+      }
+    </style>
     <!--  
         Stylesheets and Preprocessors
         ==============================
@@ -91,8 +97,23 @@
     <script src="/js/dependencies/sails.io.js"></script>
     <script src="/js/dependencies/jquery/dist/jquery.js"></script>
     <script src="/js/dependencies/angular/angular.js"></script>
+    <script src="/js/dependencies/angular-sanitize/angular-sanitize.js"></script>
     <script src="/js/dependencies/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="/js/dependencies/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="/js/dependencies/toastr/toastr.js"></script>
+    <script src="/js/app/app.module.js"></script>
+    <script src="/js/app/core/app.core.module.js"></script>
+    <script src="/js/app/homepage/homepage.module.js"></script>
+    <script src="/js/app/dashboard/dashboard.module.js"></script>
+    <script src="/js/app/core/app.core.constants.js"></script>
+    <script src="/js/app/dashboard/dashboard.ctrl.js"></script>
+    <script src="/js/app/dashboard/dashboardService.js"></script>
+    <script src="/js/app/homepage/homepage.ctrl.js"></script>
+    <script src="/js/app/homepage/homepageService.js"></script>
+    <script src="/js/app/homepage/login/login-form.ctrl.js"></script>
+    <script src="/js/app/homepage/login/login-form.directive.js"></script>
+    <script src="/js/app/homepage/signup/signup-form.ctrl.js"></script>
+    <script src="/js/app/homepage/signup/signup-form.directive.js"></script>
     <!--SCRIPTS END-->
   </body>
 </html>

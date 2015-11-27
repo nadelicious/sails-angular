@@ -30,10 +30,16 @@ var jsFilesToInject = [
   // Dependencies like jQuery, or Angular are brought in here
   'js/dependencies/jquery/dist/jquery.js',
   'js/dependencies/angular/angular.js',
+  'js/dependencies/angular-sanitize/angular-sanitize.js',
   'js/dependencies/angular-ui-router/release/angular-ui-router.js',
   'js/dependencies/angular-bootstrap/ui-bootstrap-tpls.js',
+  'js/dependencies/toastr/toastr.js',
 
-  // application
+  // app page
+  'js/app/app.module.js',
+  'js/app/core/app.core.module.js',
+  'js/app/homepage/homepage.module.js',
+  'js/app/dashboard/dashboard.module.js',
   'js/app/**/*.js'
 
   // Use the "exclude" operator to ignore files
