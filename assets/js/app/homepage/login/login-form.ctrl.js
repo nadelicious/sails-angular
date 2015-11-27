@@ -13,8 +13,8 @@
 				'password':   vm.password
 			} ).then( function ( data ) { 
 				window.location = '/dashboard';
-			} ).catch( function () {
-				$toastr.error( 'Something went wrong.' );
+			} ).catch( function ( err ) {
+				$toastr.error( err.statusText );
 			} ).finally( function () { 
 				vm.identifier = null;
 				vm.password   = null;
