@@ -1,7 +1,6 @@
 var request = require('supertest');
 
 describe('UserController', function() {
-  describe('index', function() {
     it('should get users and return success', function (done) {
       request(sails.hooks.http.app)
         .get('/user')
@@ -40,5 +39,4 @@ describe('UserController', function() {
          .field( 'username', 'nad'  )
         .expect(200, done);
     });
-  });
 });

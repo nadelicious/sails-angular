@@ -18,6 +18,14 @@ module.exports = {
 		}
 
 		return res.view( 'dashboard' );
+	},
+
+	'showHomePage' : function ( req, res ) {
+		if ( req.session.authenticated ) {
+			return res.redirect( '/dashboard' );
+		}
+
+		return res.view( 'homepage' );
 	} 
 };
 
